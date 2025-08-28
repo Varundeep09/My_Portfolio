@@ -60,27 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     campuscircle: {
       title: "Campus Circle",
-      category: "Django Web Application",
-      description: "Campus Circle is a Django-based social platform connecting students, alumni, and teachers within a college ecosystem. The platform features comprehensive user authentication, social posts and interactions, real-time messaging system, role-specific dashboards for different user types, resume upload and management, mentorship programs connecting students with alumni, job posting and application system, and event management with RSVP functionality. Built with Django's robust framework, it provides a secure and scalable solution for educational institutions.",
-      technologies: ["Python", "Django", "HTML5", "CSS3", "JavaScript", "SQLite/PostgreSQL", "Bootstrap", "Django REST Framework"],
+      category: "College Social & Professional Networking Platform",
+      description: "Campus Circle is a Django-based social networking web application designed to connect students, alumni, and teachers within a college ecosystem. It functions as a mini LinkedIn for the campus, enabling professional networking, knowledge sharing, and event collaboration. The platform supports role-based features such as resume uploads for students, mentorship opportunities, job postings for alumni, and academic notices for teachers. Key features include user authentication with role-based access, post and feed system with comments and likes, messaging and connection requests, resume upload & mentorship system for students, job postings & success stories for alumni, academic resources and notices for teachers, and event management and participation tracking.",
+      technologies: ["Django", "HTML5", "CSS3", "Bootstrap", "JavaScript", "SQLite/MySQL", "Django ORM", "REST APIs"],
       github: "https://github.com/Varundeep09/Campus-Circle",
       live: "#",
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
     },
     socialshield: {
       title: "Social Shield",
-      category: "AI-Powered Hackathon Project",
-      description: "Social Shield is an innovative AI-powered toolkit developed during a hackathon to combat digital propaganda and misinformation on social media platforms. The project features advanced bot detection algorithms, hate speech identification using NLP, real-time trend monitoring and analysis, comprehensive visualization dashboards for data insights, and automated content flagging systems. Built using Python with machine learning libraries, it leverages social media APIs to provide real-time analysis and protection against digital threats.",
-      technologies: ["Python", "Machine Learning", "NLP", "TensorFlow/PyTorch", "Social Media APIs", "Data Visualization", "Flask/Django"],
+      category: "AI-Powered Digital Propaganda Detection Toolkit",
+      description: "Social Shield is an AI-driven system designed to identify and combat misinformation, hate speech, and coordinated propaganda campaigns on social media. It analyzes text data, detects bot-driven activity, monitors trending hashtags, and generates risk assessment reports to safeguard digital democracy. The project was developed during a hackathon with a focus on real-world problem-solving using AI/ML and social media analytics. Key features include file upload or live social media data analysis, bot detection and coordination network mapping, hate speech and propaganda detection using NLP, and visualization dashboard for insights and risk levels.",
+      technologies: ["Python", "NLTK", "spaCy", "Scikit-learn", "TensorFlow/PyTorch", "Social Media APIs", "Flask/Django", "Matplotlib", "Plotly"],
       github: "https://github.com/Varundeep09/Social-Shield",
       live: "#",
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
     },
     expensetracker: {
       title: "Expense Tracker",
-      category: "Personal Finance Tool",
-      description: "The Expense Tracker is a comprehensive personal finance management application designed to help users monitor their income and expenses effectively. The tool provides detailed insights into spending habits through categorized expense tracking, monthly and yearly financial summaries, budget planning and alerts, visual reports and charts, and export functionality for financial data. The application offers an intuitive interface for easy expense entry and provides valuable analytics to help users make informed financial decisions.",
-      technologies: ["Python", "Tkinter/Flask", "SQLite", "Matplotlib", "Pandas", "HTML5", "CSS3", "JavaScript"],
+      category: "Personal Finance Management System",
+      description: "The Expense Tracker is a simple yet powerful application to help individuals manage their daily expenses and income. It allows users to record transactions, categorize them (food, travel, bills, etc.), and generate reports for better financial planning. The system provides insights into spending habits and ensures users can monitor their budgets effectively. Key features include add, update, and delete expenses/income, categorization of expenses (e.g., Food, Travel, Shopping), monthly/weekly reports and expense summaries, visual charts for spending analysis, and user authentication for secure data access.",
+      technologies: ["Python", "Flask", "SQLite/MySQL", "HTML5", "CSS3", "Bootstrap", "Chart.js", "Matplotlib"],
       github: "https://github.com/Varundeep09/Expense-Tracker",
       live: "#",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"
