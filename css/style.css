@@ -152,17 +152,41 @@ body {
   margin-bottom: 15px;
 }
 
-/* Contact Form */
-.contact-form .form-control {
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
+/* Contact Cards */
+.contact-card {
+  background: var(--light);
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
 }
 
-.contact-form .form-control:focus {
-  box-shadow: none;
-  border-color: var(--primary);
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  font-size: 48px;
+  color: var(--primary);
+}
+
+.contact-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.contact-card .btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-card .btn:hover {
+  transform: scale(1.05);
 }
 
 /* Footer */

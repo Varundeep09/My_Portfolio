@@ -307,34 +307,56 @@
     <div class="row">
       <div class="col-12 text-center mb-5">
         <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">Let's connect! Choose your preferred way to reach out.</p>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-8" data-aos="fade-up">
-        <form id="contactForm" class="contact-form" method="POST" action="https://formsubmit.co/sengarvarundeep@gmail.com">
-          <!-- Hidden settings -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="thankyou.html">
-
-          <div class="row g-3">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        <div class="contact-options">
+          <div class="row g-4">
+            <!-- Email -->
+            <div class="col-md-4">
+              <div class="contact-card text-center h-100">
+                <div class="contact-icon mb-3">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <h5>Email</h5>
+                <p class="text-muted mb-3">Send me an email</p>
+                <a href="mailto:sengarvarundeep@gmail.com" class="btn btn-primary">
+                  <i class="bi bi-envelope"></i> Email Me
+                </a>
+              </div>
             </div>
-            <div class="col-md-6">
-              <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            
+            <!-- LinkedIn -->
+            <div class="col-md-4">
+              <div class="contact-card text-center h-100">
+                <div class="contact-icon mb-3">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+                <h5>LinkedIn</h5>
+                <p class="text-muted mb-3">Connect professionally</p>
+                <a href="https://www.linkedin.com/in/varundeep-sengar-282b33255/" target="_blank" class="btn btn-primary">
+                  <i class="bi bi-linkedin"></i> Connect
+                </a>
+              </div>
             </div>
-            <div class="col-12">
-              <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-            </div>
-            <div class="col-12">
-              <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary">Send Message</button>
+            
+            <!-- WhatsApp -->
+            <div class="col-md-4">
+              <div class="contact-card text-center h-100">
+                <div class="contact-icon mb-3">
+                  <i class="bi bi-whatsapp"></i>
+                </div>
+                <h5>WhatsApp</h5>
+                <p class="text-muted mb-3">Quick message</p>
+                <a href="https://wa.me/+919589097257?text=Hi%20Varundeep,%20I%20would%20like%20to%20connect%20with%20you!" target="_blank" class="btn btn-primary">
+                  <i class="bi bi-whatsapp"></i> Message
+                </a>
+              </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
