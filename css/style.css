@@ -152,41 +152,22 @@ body {
   margin-bottom: 15px;
 }
 
-/* Contact Cards */
-.contact-card {
-  background: var(--light);
-  padding: 40px 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 1px solid #f0f0f0;
-}
-
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.contact-icon {
-  font-size: 48px;
-  color: var(--primary);
-}
-
-.contact-card h5 {
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--dark);
-}
-
-.contact-card .btn {
-  padding: 12px 24px;
+/* Contact Buttons */
+.contact-buttons .btn {
+  padding: 15px 30px;
   border-radius: 25px;
   font-weight: 600;
   transition: all 0.3s ease;
+  min-width: 200px;
 }
 
-.contact-card .btn:hover {
-  transform: scale(1.05);
+.contact-buttons .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-buttons .btn i {
+  margin-right: 8px;
 }
 
 /* Footer */
