@@ -1,81 +1,245 @@
+/* ==========================================================================
+   Varundeep Sengar — Portfolio Stylesheet
+   Identity: Software Engineer | Python Developer | Data & AI/ML
+   Palette: Navy / Deep Blue / Clean Light / Subtle Accents
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Design Tokens
+   -------------------------------------------------------------------------- */
 :root {
   --primary: #0563bb;
+  --primary-hover: #034b8e;
+  --primary-subtle: #e8f2fc;
   --secondary: #2d4a8a;
-  --dark: #1f1f1f;
+  --dark: #1e293b;
+  --dark-heading: #0f172a;
   --light: #ffffff;
-  --gray: #6c757d;
+  --bg-light: #f8fafc;
+  --bg-card: #ffffff;
+  --gray: #64748b;
+  --gray-light: #e2e8f0;
+  --border-color: #e2e8f0;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--dark);
+/* --------------------------------------------------------------------------
+   2. Base & Typography
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   overflow-x: hidden;
 }
 
-/* Navigation */
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.65;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  color: var(--dark-heading);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* --------------------------------------------------------------------------
+   3. Accessibility & Focus States
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.btn:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   4. Navigation Bar
+   -------------------------------------------------------------------------- */
 .navbar {
-  padding: 20px 0;
-  transition: all 0.3s ease-in-out;
+  padding: 18px 0;
+  transition: all var(--transition-normal);
   background-color: transparent;
+  z-index: 1030;
 }
 
 .navbar.scrolled {
-  background-color: var(--light);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 14px rgba(15, 23, 42, 0.08);
+  padding: 12px 0;
 }
 
 .navbar-brand {
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 800;
+  font-size: 1.45rem;
   color: var(--primary);
+  letter-spacing: -0.3px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-brand:hover {
+  color: var(--primary-hover);
 }
 
 .nav-link {
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  color: var(--dark);
-  padding: 8px 16px !important;
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  color: #334155;
+  padding: 8px 14px !important;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  border-radius: var(--radius-sm);
+  margin: 0 2px;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar:not(.scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar:not(.scrolled) .navbar-brand {
+  color: #ffffff;
+}
+
+.navbar:not(.scrolled) .nav-link:hover,
+.navbar:not(.scrolled) .nav-link.active {
+  color: #60a5fa;
+}
+
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
   color: var(--primary);
 }
 
-/* Hero Section */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.navbar.scrolled .navbar-toggler {
+  border-color: var(--border-color);
+  background-color: #f8fafc;
+}
+
+/* --------------------------------------------------------------------------
+   5. Hero Section
+   -------------------------------------------------------------------------- */
 .hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg') center/cover;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(5, 40, 80, 0.85) 100%),
+              url('https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg') center/cover no-repeat;
   color: var(--light);
+  padding: 120px 0 80px;
 }
 
 .hero h1 {
-  margin-bottom: 20px;
+  font-size: clamp(2.35rem, 6vw, 4.25rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  color: #ffffff;
 }
 
 .hero .lead {
-  font-size: 24px;
-  margin-bottom: 40px;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 400;
+  margin-bottom: 36px;
+  color: #cbd5e1;
+  min-height: 2em;
 }
 
 .typed {
-  color: var(--primary);
+  color: #60a5fa;
+  font-weight: 600;
 }
 
-/* Sections */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-buttons .btn {
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.2px;
+  transition: all var(--transition-fast);
+}
+
+.hero-buttons .btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(5, 99, 187, 0.35);
+}
+
+.hero-buttons .btn-outline-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   6. Sections & Headers
+   -------------------------------------------------------------------------- */
 .section-padding {
-  padding: 100px 0;
+  padding: 90px 0;
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   position: relative;
   display: inline-block;
+  color: var(--dark-heading);
+  letter-spacing: -0.3px;
 }
 
 .section-title::after {
@@ -84,96 +248,393 @@ body {
   left: 50%;
   bottom: -10px;
   transform: translateX(-50%);
-  width: 50px;
+  width: 52px;
   height: 3px;
+  border-radius: var(--radius-full);
   background-color: var(--primary);
 }
 
-/* Skills */
-.skill-item h5 {
-  font-size: 16px;
+/* --------------------------------------------------------------------------
+   7. About Section
+   -------------------------------------------------------------------------- */
+#about img {
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--light);
+  max-width: 440px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform var(--transition-normal);
+}
+
+#about img:hover {
+  transform: scale(1.02);
+}
+
+#about h3 {
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-weight: 700;
+  color: var(--secondary);
+  line-height: 1.35;
+}
+
+#about .lead {
+  font-size: 1.04rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+#about p a {
+  word-break: break-word;
+}
+
+#about .btn-primary {
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
   font-weight: 600;
+  transition: all var(--transition-fast);
 }
 
-.progress {
-  height: 10px;
-  border-radius: 5px;
-  background-color: #e9ecef;
+#about .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(5, 99, 187, 0.28);
 }
 
-.progress-bar {
-  background-color: var(--primary);
-  transition: width 1.5s ease-in-out;
+/* --------------------------------------------------------------------------
+   8. Experience & Education Section
+   -------------------------------------------------------------------------- */
+#experience h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-heading);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 12px;
 }
 
-/* Projects */
+#experience h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-heading);
+}
+
+#experience .card {
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary) !important;
+  background-color: var(--bg-card);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#experience .card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+#experience .badge.bg-light {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+#experience ul li {
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   9. Technical Skills & Currently Learning
+   -------------------------------------------------------------------------- */
+.skill-category-card {
+  background: var(--light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--primary);
+  height: 100%;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-category-card h5 {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: #f1f5f9;
+  color: #334155;
+  padding: 6px 13px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 500;
+  margin: 3px 2px;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.skill-badge:hover {
+  background-color: #e2e8f0;
+  color: var(--dark-heading);
+  transform: translateY(-1px);
+}
+
+.learning-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid #cbd5e1;
+  border-left: 5px solid #4f46e5;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.learning-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.learning-badge {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #3730a3;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 4px 3px;
+  border: 1px solid #c7d2fe;
+  transition: all var(--transition-fast);
+}
+
+.learning-badge:hover {
+  background-color: #e0e7ff;
+  border-color: #a5b4fc;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   10. Projects Grid & Cards
+   -------------------------------------------------------------------------- */
 .project-card {
-  border-radius: 10px;
+  background: var(--light);
+  border-radius: var(--radius-md);
   overflow: hidden;
   position: relative;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  height: 100%;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
 }
 
 .project-card img {
   width: 100%;
-  height: 250px;
+  height: 240px;
   object-fit: cover;
+  display: block;
+  transition: transform var(--transition-normal);
 }
 
-.project-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  transform: translateY(100%);
-  transition: all 0.3s ease;
+.project-card:hover img {
+  transform: scale(1.04);
 }
 
-.project-card:hover .project-info {
-  transform: translateY(0);
+/* Desktop hover / focus overlay treatment */
+@media (min-width: 768px) {
+  .project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 18px 20px;
+    transform: translateY(100%);
+    transition: transform var(--transition-normal);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .project-card:hover .project-info,
+  .project-card:focus-within .project-info {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile: always visible static card body */
+@media (max-width: 767px) {
+  .project-info {
+    position: static;
+    transform: none;
+    background: var(--light);
+    padding: 18px;
+    border-top: 1px solid var(--border-color);
+  }
 }
 
 .project-info h4 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--dark-heading);
+  line-height: 1.35;
 }
 
 .project-info p {
-  font-size: 14px;
+  font-size: 0.88rem;
   color: var(--gray);
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-/* Contact Buttons */
-.contact-buttons .btn {
-  padding: 15px 30px;
-  border-radius: 25px;
+.project-info .btn {
+  border-radius: var(--radius-full);
   font-weight: 600;
-  transition: all 0.3s ease;
-  min-width: 200px;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  transition: all var(--transition-fast);
+}
+
+.project-info .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   11. Project Details Modal
+   -------------------------------------------------------------------------- */
+.modal-content {
+  border: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 18px 24px;
+  background-color: var(--bg-light);
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--secondary);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.project-modal-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--dark-heading);
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.project-modal-category {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.project-modal-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+.project-modal-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.project-modal-technologies li {
+  background-color: #f1f5f9;
+  color: #334155;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+.modal-body .btn {
+  border-radius: var(--radius-full);
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   12. Contact Section
+   -------------------------------------------------------------------------- */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-buttons .btn {
+  padding: 12px 26px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+  min-width: 210px;
+  margin: 0 !important;
 }
 
 .contact-buttons .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 .contact-buttons .btn i {
   margin-right: 8px;
 }
 
-/* Footer */
+/* --------------------------------------------------------------------------
+   13. Footer
+   -------------------------------------------------------------------------- */
 .footer {
   background-color: var(--light);
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--border-color);
+  color: var(--gray);
+  font-size: 0.9rem;
 }
 
 .btn-social {
@@ -185,9 +646,20 @@ body {
   justify-content: center;
   padding: 0;
   font-size: 18px;
+  color: #ffffff;
+  background-color: #334155;
+  transition: all var(--transition-fast);
 }
 
-/* Animations */
+.btn-social:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   14. Animations
+   -------------------------------------------------------------------------- */
 [data-aos] {
   pointer-events: none;
 }
@@ -196,29 +668,181 @@ body {
   pointer-events: auto;
 }
 
-/* Responsive */
+/* Prevent off-screen horizontal translation from triggering layout overflow on mobile screens */
 @media (max-width: 991px) {
-  .navbar-nav {
-    background-color: var(--light);
-    padding: 15px;
-    border-radius: 5px;
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translate3d(0, 30px, 0) !important;
   }
-  
-  .hero h1 {
-    font-size: 48px;
-  }
-  
-  .hero .lead {
-    font-size: 20px;
+  [data-aos="fade-left"].aos-animate,
+  [data-aos="fade-right"].aos-animate {
+    transform: translate3d(0, 0, 0) !important;
   }
 }
 
+/* --------------------------------------------------------------------------
+   15. Responsive Refinements
+   -------------------------------------------------------------------------- */
+
+/* Laptops & Tablets Landscape (<= 1024px) */
+@media (max-width: 1024px) {
+  .section-padding {
+    padding: 75px 0;
+  }
+}
+
+/* Tablet Portrait & Mobile Collapse (<= 991px) */
+@media (max-width: 991px) {
+  .navbar {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
+    padding: 12px 0;
+  }
+
+  .navbar .navbar-brand {
+    color: var(--primary) !important;
+  }
+
+  .navbar .navbar-toggler {
+    border-color: var(--border-color);
+    background-color: #f8fafc;
+  }
+
+  .navbar-nav {
+    background-color: var(--light);
+    padding: 14px 0 6px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 12px;
+  }
+
+  .nav-link {
+    color: #334155 !important;
+    padding: 10px 14px !important;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--primary) !important;
+    background-color: #f1f5f9;
+  }
+
+  #about img {
+    margin-bottom: 30px;
+  }
+
+  .section-padding {
+    padding: 65px 0;
+  }
+}
+
+/* Mobile Landscape & Medium Screens (<= 767px) */
 @media (max-width: 767px) {
   .section-padding {
-    padding: 60px 0;
+    padding: 55px 0;
   }
-  
+
   .section-title {
-    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .hero {
+    padding: 100px 0 60px;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .modal-dialog {
+    margin: 12px;
+  }
+
+  .modal-body {
+    padding: 18px;
+  }
+
+  .project-modal-image {
+    max-height: 200px;
+    margin-bottom: 16px;
+  }
+
+  .footer .row {
+    text-align: center;
+    gap: 12px;
+  }
+}
+
+/* Standard Smartphones (<= 576px) */
+@media (max-width: 576px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #experience .card .d-flex.justify-content-between.align-items-start {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px;
+  }
+
+  #experience .badge.bg-light {
+    align-self: flex-start;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-buttons .btn {
+    width: 100%;
+    min-width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small Mobile (320px – 375px) */
+@media (max-width: 375px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero .lead {
+    font-size: 1.05rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .skill-category-card {
+    padding: 18px 14px;
+  }
+
+  .learning-card {
+    padding: 20px 16px;
+  }
+
+  .skill-badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .learning-badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  #about .lead {
+    font-size: 0.98rem;
+  }
+
+  .modal-body {
+    padding: 14px;
   }
 }
