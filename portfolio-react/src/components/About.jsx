@@ -59,7 +59,7 @@ export default function About() {
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
               <p>
-                I graduated in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning from <strong className="text-white font-semibold">IPS Academy Institute of Engineering and Science, Indore</strong> (CGPA: 8.575/10).
+                I graduated in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning from <strong className="text-white font-semibold">IPS Academy Institute of Engineering and Science, Indore</strong> (CGPA: 8.6/10).
               </p>
               <p>
                 My technical foundation centers around <strong className="text-amber-300 font-semibold">Python</strong> and <strong className="text-amber-300 font-semibold">SQL</strong>. Through hands-on internship experience at Alphanext Technology Solutions, I built automated ETL routines cleaning and analyzing 20,000+ real-world records. At Tokyo Quant and Infosys Springboard, I developed interactive analytical dashboards and architected asynchronous REST APIs with FastAPI.
@@ -76,7 +76,7 @@ export default function About() {
                   <GraduationCap className="w-4 h-4" /> Degree &amp; Merit
                 </div>
                 <div className="text-sm font-bold text-white">B.Tech CSE (AI &amp; ML)</div>
-                <div className="text-xs text-slate-400 font-mono mt-0.5">IPS Academy &bull; CGPA: 8.575/10</div>
+                <div className="text-xs text-slate-400 font-mono mt-0.5">IPS Academy &bull; CGPA: 8.6/10</div>
               </div>
 
               <div className="p-4 rounded-2xl bg-[#12141f] border border-white/10">

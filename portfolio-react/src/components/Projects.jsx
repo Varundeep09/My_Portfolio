@@ -38,7 +38,6 @@ export default function Projects() {
       description: "Trained a Random Forest churn prediction model on customer feature vectors and coupled it with an experimental LLM-based explanation layer. The system generates concise, plain-language explanations of model outputs to help retention teams understand risk factors.",
       problem: "Traditional churn classifiers return numerical risk scores without actionable plain-language rationale, creating friction for non-technical customer retention teams.",
       solution: "Engineered Scikit-Learn feature pipelines and model inference coupled with a local explainability module that contextualizes feature attributions into plain-English reasoning while keeping raw model scores intact.",
-      accuracyNote: "The machine learning pipeline is available on GitHub. The LLM explanation layer is implemented locally and is not yet present in the public repository.",
       technologies: ["Python", "Scikit-Learn", "Random Forest", "FastAPI", "SQLite", "Local GenAI Explainer"],
       github: "https://github.com/Varundeep09/Churn-Prediction-AI-Explanation",
       live: null, // Hidden: no genuine live URL
@@ -81,10 +80,9 @@ export default function Projects() {
       description: "Full-stack personal finance tracking application helping individuals record daily expenditures, categorize transactions, and visualize monthly budgets through interactive charts.",
       problem: "Users lack simple, reliable self-hosted tools to monitor spending trends, budget thresholds, and categorize multi-source expenses.",
       solution: "Built a Flask application backed by PostgreSQL, featuring responsive expense forms, date filtering, and Chart.js dashboards for spending breakdown visualization.",
-      accuracyNote: "GitHub repository URL was flagged as unverified/private in past audit; link preserved as requested without claiming public accessibility.",
       technologies: ["Python", "Flask", "PostgreSQL", "HTML5", "CSS3", "JavaScript", "Chart.js"],
       github: "https://github.com/Varundeep09/Expense-Tracker-Flask",
-      live: "https://expense-tracker-web-pbyw.onrender.com/", // Genuine live app
+      live: null, // Hidden: live demo link removed
       badge: "Flask & PostgreSQL"
     },
     {

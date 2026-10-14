@@ -9,6 +9,21 @@ import {
 export default function Experience() {
   const experiences = [
     {
+      company: "Dhee Coding Lab",
+      role: "Python Full Stack (PFS) Trainee",
+      period: "July 2026 – Present",
+      nature: "Full Stack Technical Training",
+      natureType: "training",
+      natureBadge: "bg-amber-500/10 text-amber-300 border-amber-500/30",
+      description: "Currently undergoing Python Full Stack training, learning and working across backend engineering, relational databases, and frontend development.",
+      points: [
+        "Currently undergoing structured Python Full Stack (PFS) training.",
+        "Learning and working hands-on with Python, SQL, and Django.",
+        "Developing frontend interfaces and practicing version control with Git and GitHub."
+      ],
+      technologies: ["Python", "SQL", "Frontend Technologies", "Django", "Git", "GitHub"]
+    },
+    {
       company: "Alphanext Technology Solutions",
       role: "Graduate Trainee Engineer Intern",
       period: "May 2026 – July 2026",

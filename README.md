@@ -14,7 +14,7 @@ GitHub Repository: **[https://github.com/Varundeep09/My_Portfolio](https://githu
 
 This repository houses the personal professional portfolio of **Varundeep Sengar**, specializing in **Data Analytics**, **Data Science / Machine Learning**, and **Python Backend Engineering**.
 
-The application highlights verified academic qualifications (B.Tech CSE with AI & ML specialization, 8.575 CGPA), professional internship experiences (Bluestock Fintech, Cognifyz Technologies, Unified Mentor), selected engineering projects, core technical competencies, and verified contact channels.
+The application highlights verified academic qualifications (B.Tech CSE with AI & ML specialization, 8.6 CGPA), professional internship experiences (Dhee Coding Lab, Alphanext Technology Solutions, Tokyo Quant, Infosys Springboard), selected engineering projects, core technical competencies, and verified contact channels.
 
 ---
 

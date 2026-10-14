@@ -12,7 +12,7 @@ export default function Education() {
       degree: "B.Tech in Computer Science and Engineering (AI & ML)",
       institution: "IPS Academy Institute of Engineering and Science, Indore",
       period: "2022 – 2026",
-      score: "CGPA: 8.575 / 10",
+      score: "CGPA: 8.6 / 10",
       scoreType: "CGPA",
       status: "Graduating 2026",
       description: "Comprehensive curriculum covering Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Database Management Systems, and Python Programming.",
@@ -26,7 +26,7 @@ export default function Education() {
       scoreType: "Percentage",
       status: "Completed",
       description: "Core science discipline specializing in Physics, Chemistry, and Mathematics (PCM), establishing quantitative and analytical problem-solving fundamentals.",
-      courses: ["Physics", "Chemistry", "Mathematics", "Computer Science"]
+      courses: ["Physics", "Chemistry", "Mathematics"]
     },
     {
       degree: "Secondary School Certificate (Class X)",

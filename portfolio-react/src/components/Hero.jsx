@@ -115,7 +115,7 @@ export default function Hero() {
             <div className="pt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-400 font-mono border-t border-white/[0.08]">
               <div className="flex items-center gap-1.5">
                 <GraduationCap className="w-3.5 h-3.5 text-amber-400" />
-                <span>B.Tech CSE (AI &amp; ML) &bull; CGPA 8.575/10</span>
+                <span>B.Tech CSE (AI &amp; ML) &bull; CGPA 8.6/10</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-slate-500" />
@@ -157,7 +157,7 @@ export default function Hero() {
                       Varundeep Sengar
                     </h3>
                     <p className="text-xs font-mono text-amber-400 mt-0.5">
-                      AI &amp; ML Specialization &bull; 8.575 CGPA
+                      AI &amp; ML Specialization &bull; 8.6 CGPA
                     </p>
                   </div>
 
@@ -204,7 +204,7 @@ export default function Hero() {
                     <div className="text-[10px] font-mono text-slate-400">Projects</div>
                   </div>
                   <div className="p-2 rounded-xl bg-white/[0.03] border border-white/5">
-                    <div className="text-xs sm:text-sm font-bold text-emerald-400">3 Roles</div>
+                    <div className="text-xs sm:text-sm font-bold text-emerald-400">4 Roles</div>
                     <div className="text-[10px] font-mono text-slate-400">Experience</div>
                   </div>
                 </div>
