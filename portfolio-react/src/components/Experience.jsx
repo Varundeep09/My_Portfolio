@@ -29,7 +29,7 @@ export default function Experience() {
       period: "June 2025 – January 2026",
       nature: "Hands-on Technical Training",
       natureType: "training",
-      natureBadge: "bg-purple-500/10 text-purple-400 border-purple-500/30",
+      natureBadge: "bg-amber-500/10 text-amber-300 border-amber-500/30",
       description: "Rigorous technical training curriculum focused on exploratory data analysis, SQL querying, and business intelligence reporting.",
       points: [
         "Conducted exploratory data analysis, data wrangling, and trend analysis using Python, Pandas, NumPy, and SQL.",
@@ -44,7 +44,7 @@ export default function Experience() {
       period: "November 2025 – January 2026",
       nature: "Virtual Internship",
       natureType: "internship",
-      natureBadge: "bg-sky-500/10 text-sky-400 border-sky-500/30",
+      natureBadge: "bg-slate-800 text-slate-300 border-white/10",
       description: "Virtual engineering internship centered on modern Python backend web development and relational databases.",
       points: [
         "Architected a flight booking simulator using Python and FastAPI backend endpoints.",
@@ -56,14 +56,13 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 sm:py-24 lg:py-28 border-t border-slate-900 bg-slate-950 relative">
+    <section id="experience" className="py-20 sm:py-24 lg:py-28 border-t border-white/[0.08] bg-[#090a10] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="flex flex-col items-start mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-[11px] font-mono tracking-wider text-cyan-400 uppercase mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-            Practical Experience &bull; Internships &amp; Training
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono tracking-wider text-amber-400 uppercase mb-3">
+            <span>02 &bull; EXPERIENCE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Work Experience &amp; Technical Internships
@@ -78,10 +77,10 @@ export default function Experience() {
           {experiences.map((exp) => (
             <div
               key={exp.company}
-              className="p-6 sm:p-8 rounded-2xl bg-slate-900/50 border border-slate-800/80 hover:border-slate-700 transition-all duration-300 relative overflow-hidden group"
+              className="p-6 sm:p-8 rounded-3xl bg-[#12141f] border border-white/10 hover:border-white/20 transition-all duration-300 relative overflow-hidden group"
             >
               {/* Subtle top indicator bar */}
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent group-hover:via-cyan-400/60 transition-all" />
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-amber-400/40 to-transparent group-hover:via-amber-400/80 transition-all" />
 
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
                 <div>
@@ -89,8 +88,8 @@ export default function Experience() {
                     <span className={`text-[11px] font-mono font-semibold px-2.5 py-1 rounded-md border ${exp.natureBadge}`}>
                       {exp.nature}
                     </span>
-                    <span className="text-xs font-mono text-slate-500 flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                    <span className="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                      <Calendar className="w-3.5 h-3.5 text-slate-500" />
                       {exp.period}
                     </span>
                   </div>
@@ -98,18 +97,18 @@ export default function Experience() {
                   <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                     {exp.role}
                   </h3>
-                  <div className="text-sm sm:text-base font-semibold text-cyan-400 mt-0.5">
+                  <div className="text-sm sm:text-base font-semibold text-amber-400 mt-0.5">
                     {exp.company}
                   </div>
                 </div>
 
-                <div className="text-xs font-mono text-slate-500 lg:text-right shrink-0">
+                <div className="text-xs font-mono text-slate-400 lg:text-right shrink-0">
                   {exp.natureType === 'training' ? (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-purple-300">
-                      <BookOpen className="w-3.5 h-3.5" /> Hands-on Technical Training
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-black/40 border border-white/10 text-amber-300">
+                      <BookOpen className="w-3.5 h-3.5" /> Hands-on Training
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-950 border border-slate-800 text-emerald-300">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-black/40 border border-white/10 text-emerald-300">
                       <Briefcase className="w-3.5 h-3.5" /> Practical Internship
                     </span>
                   )}
@@ -124,20 +123,20 @@ export default function Experience() {
               {/* Bullet Points */}
               <ul className="space-y-2 mb-5">
                 {exp.points.map((pt, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300/80 leading-relaxed">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300/85 leading-relaxed">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                     <span>{pt}</span>
                   </li>
                 ))}
               </ul>
 
               {/* Technologies */}
-              <div className="pt-4 border-t border-slate-800/60 flex flex-wrap items-center gap-2">
+              <div className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-2">
                 <span className="text-xs font-mono text-slate-400 mr-1">Stack:</span>
                 {exp.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-950 border border-slate-800 text-slate-300"
+                    className="text-xs font-mono px-2.5 py-1 rounded-md bg-black/40 border border-white/5 text-slate-300"
                   >
                     {tech}
                   </span>

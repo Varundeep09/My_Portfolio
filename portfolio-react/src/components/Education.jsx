@@ -59,14 +59,13 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 sm:py-24 lg:py-28 border-t border-slate-900 bg-slate-950/40 relative">
+    <section id="education" className="py-20 sm:py-24 lg:py-28 border-t border-white/[0.08] bg-[#0c0e17] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="flex flex-col items-start mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-[11px] font-mono tracking-wider text-cyan-400 uppercase mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-            Academic Background &bull; Verified Credentials
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono tracking-wider text-amber-400 uppercase mb-3">
+            <span>03 &bull; EDUCATION</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Education &amp; Certifications
@@ -81,24 +80,24 @@ export default function Education() {
           {educationList.map((edu, idx) => (
             <div
               key={edu.degree}
-              className={`p-6 rounded-2xl bg-slate-900/60 border ${
+              className={`p-6 sm:p-7 rounded-3xl bg-[#12141f] border ${
                 idx === 0 
-                  ? 'border-cyan-500/40 shadow-lg shadow-cyan-950/20 ring-1 ring-cyan-500/20' 
-                  : 'border-slate-800/80'
-              } flex flex-col justify-between hover:border-slate-700 transition-all duration-300 relative`}
+                  ? 'border-amber-400/40 ring-1 ring-amber-400/20' 
+                  : 'border-white/10'
+              } flex flex-col justify-between hover:border-white/20 transition-all duration-300 relative`}
             >
               <div>
                 {/* Top header badge */}
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-xs font-mono text-slate-500 flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                  <span className="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
                     {edu.period}
                   </span>
 
                   <span className={`text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${
                     idx === 0 
-                      ? 'bg-cyan-500/10 text-cyan-400 border-cyan-500/30' 
-                      : 'bg-slate-800/80 text-slate-300 border-slate-700/60'
+                      ? 'bg-amber-400/10 text-amber-300 border-amber-400/30' 
+                      : 'bg-white/[0.04] text-slate-300 border-white/10'
                   }`}>
                     {edu.score}
                   </span>
@@ -109,7 +108,7 @@ export default function Education() {
                 </h3>
 
                 <div className="text-xs sm:text-sm font-semibold text-slate-400 mb-3 flex items-start gap-1.5">
-                  <Building2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <Building2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <span>{edu.institution}</span>
                 </div>
 
@@ -119,11 +118,11 @@ export default function Education() {
               </div>
 
               {/* Course tags */}
-              <div className="pt-3 border-t border-slate-800/60 flex flex-wrap gap-1.5">
+              <div className="pt-4 border-t border-white/10 flex flex-wrap gap-1.5">
                 {edu.courses.map((c) => (
                   <span
                     key={c}
-                    className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400"
+                    className="text-[11px] font-mono px-2 py-0.5 rounded bg-black/40 border border-white/5 text-slate-400"
                   >
                     {c}
                   </span>
@@ -134,9 +133,9 @@ export default function Education() {
         </div>
 
         {/* Certifications Sub-Section */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80">
+        <div className="p-6 sm:p-8 rounded-3xl bg-[#12141f] border border-white/10">
           <div className="flex items-center gap-2 mb-6">
-            <Award className="w-5 h-5 text-cyan-400" />
+            <Award className="w-5 h-5 text-amber-400" />
             <h3 className="text-lg sm:text-xl font-bold text-white">
               Verified Technical Certifications
             </h3>
@@ -146,7 +145,7 @@ export default function Education() {
             {certifications.map((cert) => (
               <div
                 key={cert.title}
-                className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-slate-700 transition-colors"
+                className="p-5 rounded-2xl bg-black/40 border border-white/10 hover:border-white/20 transition-colors"
               >
                 <div className="flex items-center gap-2 mb-1.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -154,7 +153,7 @@ export default function Education() {
                     {cert.title}
                   </span>
                 </div>
-                <div className="text-xs font-mono text-cyan-400 mb-2">
+                <div className="text-xs font-mono text-amber-400 mb-2">
                   {cert.issuer}
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">

@@ -10,7 +10,7 @@ import Contact from './components/Contact';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between selection:bg-cyan-500/20 selection:text-cyan-300 overflow-x-hidden scroll-smooth">
+    <div className="min-h-screen bg-[#090a10] text-slate-100 flex flex-col justify-between selection:bg-amber-500/25 selection:text-amber-200 overflow-x-hidden">
       {/* Sticky Navigation Header */}
       <Navbar />
 
